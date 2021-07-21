@@ -29,7 +29,6 @@ bool parse(Param* param, int argc, char* argv[]) {
 void ethernet_sub_print(struct libnet_ethernet_hdr *eth, char host){
     for(int i = 0; i < ETH_ALEN; i++){
         switch(host){
-        //inet_ntoa: Interconversion function between NBO(big-endian) and Dotted-Decimal Notation
         case 's': printf("%02x", eth->ether_shost[i]); break;//source mac print
         case 'd': printf("%02x", eth->ether_dhost[i]); break;//destination mac print
         }
